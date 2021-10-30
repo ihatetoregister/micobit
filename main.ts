@@ -1,8 +1,8 @@
 function triangle (x: number) {
     return Math.abs(x % (1023 * 2) - 1023)
 }
-let sannolikhet = 0
 let x = 0
+let sannolikhet = 0
 basic.showLeds(`
     # # # # #
     # # # # #
