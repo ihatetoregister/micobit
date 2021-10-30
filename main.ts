@@ -1,4 +1,8 @@
+function triangle (x: number) {
+    return Math.abs(x % (1023 * 2) - 1023)
+}
 let sannolikhet = 0
+let x = 0
 basic.showLeds(`
     # # # # #
     # # # # #
@@ -24,5 +28,6 @@ basic.forever(function () {
     basic.pause(1000)
 })
 basic.forever(function () {
-    pins.analogWritePin(AnalogPin.P1, 1023)
+    pins.analogWritePin(AnalogPin.P1, triangle(x))
+    x = x + 10
 })
