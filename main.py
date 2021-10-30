@@ -3,6 +3,7 @@ def triangle(x: number):
 blinkSpeed = 0
 sannolikhet = 0
 x2 = 0
+
 basic.show_leds("""
     # # # # #
         # # # # #
@@ -21,15 +22,15 @@ def on_forever2():
     if Math.random_boolean():
         sannolikhet = randint(0, 100)
         if sannolikhet < 10:
-            blinkSpeed = 100
+            blinkSpeed = 200
             soundExpression.mysterious.play_until_done()
         elif sannolikhet < 20:
-            blinkSpeed = 50
+            blinkSpeed = 100
             soundExpression.yawn.play_until_done()
         elif sannolikhet < 30:
-            blinkSpeed = 25
+            blinkSpeed = 50
             soundExpression.sad.play_until_done()
-    blinkSpeed = 1
+    blinkSpeed = 10
     basic.pause(1000)
 basic.forever(on_forever2)
 
@@ -37,4 +38,5 @@ def on_forever3():
     global x2
     pins.analog_write_pin(AnalogPin.P1, triangle(x2))
     x2 += blinkSpeed
+    basic.pause(1)
 basic.forever(on_forever3)
