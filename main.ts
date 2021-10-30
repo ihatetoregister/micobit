@@ -23,3 +23,6 @@ basic.forever(function () {
     }
     basic.pause(1000)
 })
+basic.forever(function () {
+    pins.analogWritePin(AnalogPin.P1, 1023)
+})
