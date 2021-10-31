@@ -39,7 +39,7 @@ basic.forever(function on_forever2() {
 basic.forever(function on_forever3() {
     
     pins.analogWritePin(AnalogPin.P1, triangle(x2))
-    pins.analogWritePin(AnalogPin.P2, triangle(x2 + 512))
+    pins.analogWritePin(AnalogPin.P2, triangle(x2 + 1023))
     x2 += blinkSpeed
     basic.pause(1)
 })

@@ -37,7 +37,7 @@ basic.forever(on_forever2)
 def on_forever3():
     global x2
     pins.analog_write_pin(AnalogPin.P1, triangle(x2))
-    pins.analog_write_pin(AnalogPin.P2, triangle(x2+512))
+    pins.analog_write_pin(AnalogPin.P2, triangle(x2+1023))
     x2 += blinkSpeed
     basic.pause(1)
 basic.forever(on_forever3)
